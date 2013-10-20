@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editTextTotalIncome"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextTotalIncome"
+        android:layout_alignParentLeft="true"
+        android:text="@string/total_income" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextTotalIncome"
+        android:layout_toRightOf="@+id/editTextTotalIncome"
+        android:text="@string/yuan" />
+
+    <EditText
+        android:id="@+id/editTextPreTaxDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextTotalIncome"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewPreTaxDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextPreTaxDeduction"
+        android:layout_toLeftOf="@+id/editTextPreTaxDeduction"
+        android:text="@string/PreTaxDeduction" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPreTaxDeduction"
+        android:layout_toRightOf="@+id/textViewPreTaxDeduction"
+        android:text="@string/note_of_preTax" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextPreTaxDeduction"
+        android:layout_alignLeft="@+id/textView2"
+        android:text="@string/yuan" />
+
+    <EditText
+        android:id="@+id/editTextIncomeTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonTaxCalculation"
+        android:layout_toLeftOf="@+id/buttonTaxCalculation"
+        android:layout_toRightOf="@+id/textViewIncomeTax"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewIncomeTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextIncomeTax"
+        android:layout_toLeftOf="@+id/textView3"
+        android:text="@string/income_tax" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextIncomeTaxThreshold"
+        android:layout_alignLeft="@+id/buttonTaxCalculation"
+        android:text="@string/yuan" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextIncomeTax"
+        android:layout_alignLeft="@+id/buttonTaxCalculation"
+        android:text="@string/yuan" />
+
+    <Button
+        android:id="@+id/buttonTaxCalculation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginTop="16dp"
+        android:text="@string/StartCalculate" />
+
+    <EditText
+        android:id="@+id/editTextIncomeTaxThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_toLeftOf="@+id/TextView01"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/ValueOfIncomeTaxThreshold" />
+
+    <TextView
+        android:id="@+id/textViewIncomeTaxThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextIncomeTaxThreshold"
+        android:layout_alignParentLeft="true"
+        android:text="@string/IncomeTaxThreshold" />
+
+    <Button
+        android:id="@+id/buttonCleanupIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="@string/Cleanup" />
+
+    <Button
+        android:id="@+id/ButtonCleanupDeduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:text="@string/Cleanup" />
+
+    <Button
+        android:id="@+id/buttonCalculateIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView02"
+        android:layout_below="@+id/TextView02"
+        android:layout_marginTop="20dp"
+        android:text="@string/CalculateIncome" />
+
+    <Button
+        android:id="@+id/ButtonCleanupIncomeTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView02"
+        android:layout_alignBottom="@+id/TextView02"
+        android:layout_alignLeft="@+id/ButtonCleanupDeduction"
+        android:text="@string/Cleanup" />
+
+    <Button
+        android:id="@+id/buttonReturn_Tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/return_to_main_activity" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/buttonCalculateIncome"
+        android:layout_toLeftOf="@+id/buttonCalculateIncome"
+        android:text="@string/NoteOfCalculateIncome" />
+
+</RelativeLayout>

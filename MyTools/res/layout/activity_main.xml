@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/buttonScreenResolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/screen_resolution" />
+
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_toRightOf="@+id/buttonScreenResolution"
+        android:text="@string/exit" />
+
+    <Button
+        android:id="@+id/buttonGoToIncomeTaxCalculation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonScreenResolution"
+        android:layout_marginTop="10dp"
+        android:text="@string/income_tax_calculation" />
+
+    <Button
+        android:id="@+id/buttonPhoneInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonGoToIncomeTaxCalculation"
+        android:layout_centerHorizontal="true"
+        android:text="@string/phone_info" />
+
+    <Button
+        android:id="@+id/buttonGoToFileSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonGoToIncomeTaxCalculation"
+        android:layout_alignParentRight="true"
+        android:text="@string/file_search" />
+
+    <Switch
+        android:id="@+id/switchFlashlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonGoToIncomeTaxCalculation"
+        android:layout_marginTop="18dp"
+        android:text="@string/flashlight" />
+
+    <SurfaceView
+        android:id="@+id/surfaceViewCamera"
+        android:layout_width="1.0dip"
+        android:layout_height="1.0dip"
+        android:layout_alignBaseline="@+id/switchFlashlight"
+        android:layout_alignBottom="@+id/switchFlashlight"
+        android:layout_toRightOf="@+id/buttonScreenResolution" />
+
+    <Button
+        android:id="@+id/buttonRecordLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/switchFlashlight"
+        android:layout_alignLeft="@+id/buttonPhoneInfo"
+        android:text="@string/record_location" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/switchFlashlight"
+        android:layout_marginTop="15dp"
+        android:text="@string/welcome" />
+
+    <Button
+        android:id="@+id/buttonTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/switchFlashlight"
+        android:layout_alignBottom="@+id/switchFlashlight"
+        android:layout_alignParentRight="true"
+        android:text="@string/test" />
+
+</RelativeLayout>
