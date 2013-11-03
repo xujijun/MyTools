@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
+<RelativeLayout
+    android:id="@+id/RelativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">    
     <Button
         android:id="@+id/buttonScreenResolution"
         android:layout_width="wrap_content"
@@ -12,82 +16,112 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="@string/screen_resolution" />
-
+    
+    
     <Button
-        android:id="@+id/buttonExit"
+        android:id="@+id/buttonPhoneInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
         android:layout_toRightOf="@+id/buttonScreenResolution"
-        android:text="@string/exit" />
+        android:text="@string/phone_info" />
+    
+    
+    <Button
+        android:id="@+id/buttonGoToFileSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/buttonPhoneInfo"
+        android:text="@string/file_search" />
+</RelativeLayout>
+    
+
+<RelativeLayout
+    android:id="@+id/RelativeLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/RelativeLayout2">
+
+    <Button
+        android:id="@+id/buttonRecordLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:text="@string/record_location" />
 
     <Button
         android:id="@+id/buttonGoToIncomeTaxCalculation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/buttonScreenResolution"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
         android:text="@string/income_tax_calculation" />
 
-    <Button
-        android:id="@+id/buttonPhoneInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonGoToIncomeTaxCalculation"
-        android:layout_centerHorizontal="true"
-        android:text="@string/phone_info" />
+</RelativeLayout>
 
-    <Button
-        android:id="@+id/buttonGoToFileSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonGoToIncomeTaxCalculation"
-        android:layout_alignParentRight="true"
-        android:text="@string/file_search" />
-
-    <Switch
-        android:id="@+id/switchFlashlight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/buttonGoToIncomeTaxCalculation"
-        android:layout_marginTop="18dp"
-        android:text="@string/flashlight" />
+<RelativeLayout
+    android:id="@+id/RelativeLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/RelativeLayout3">
 
     <SurfaceView
         android:id="@+id/surfaceViewCamera"
         android:layout_width="1.0dip"
-        android:layout_height="1.0dip"
-        android:layout_alignBaseline="@+id/switchFlashlight"
-        android:layout_alignBottom="@+id/switchFlashlight"
-        android:layout_toRightOf="@+id/buttonScreenResolution" />
-
-    <Button
-        android:id="@+id/buttonRecordLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/switchFlashlight"
-        android:layout_alignLeft="@+id/buttonPhoneInfo"
-        android:text="@string/record_location" />
-
-    <TextView
-        android:id="@+id/textViewStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/switchFlashlight"
-        android:layout_marginTop="15dp"
-        android:text="@string/welcome" />
+        android:layout_height="1.0dip"/>
 
     <Button
         android:id="@+id/buttonTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/switchFlashlight"
-        android:layout_alignBottom="@+id/switchFlashlight"
         android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="25dp"
         android:text="@string/test" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonTest"
+        android:layout_alignBottom="@+id/buttonTest"
+        android:layout_toRightOf="@+id/surfaceViewCamera"
+        android:text="@string/flashlight" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonFlashlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_toRightOf="@+id/textView1"/>
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/RelativeLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/RelativeLayout4"> 
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/welcome" />
+
+  
+        <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:text="@string/exit" />
+</RelativeLayout>
 
 </RelativeLayout>

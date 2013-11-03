@@ -4,9 +4,9 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="D:/My Documents/Android/MyTools/libs/activation.jar"/>
-	<classpathentry kind="lib" path="D:/My Documents/Android/MyTools/libs/additionnal.jar"/>
-	<classpathentry kind="lib" path="D:/My Documents/Android/MyTools/libs/mail.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/Git/MyTools/MyTools/libs/activation.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/Git/MyTools/MyTools/libs/additionnal.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/Git/MyTools/MyTools/libs/mail.jar"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
